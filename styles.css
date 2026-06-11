@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+}
+
+.examen-final {
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+
+.encabezado {
+    background-color: #1e3c72;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.titulo-principal {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.contenedor-tres-columnas {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 0;
+    flex: 1;
+}
+
+.columna {
+    padding: 30px 20px;
+}
+
+.columna-menu {
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.columna-contenido {
+    background-color: white;
+    padding: 30px;
+}
+
+.columna-publicidad {
+    background-color: #f8f9fa;
+    border-left: 1px solid #dee2e6;
+}
+
+.caja-menu {
+    text-align: center;
+}
+
+.subtitulo-columna {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lista-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.boton-menu-principal {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+.boton-menu-principal:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.caja-publicidad {
+    text-align: center;
+}
+
+.avatar-contenedor {
+    background-color: #e9ecef;
+    padding: 25px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.avatar-imagen {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.avatar-nombre {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+
+.avatar-descripcion {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.carrusel-mundial {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.grilla-perfil {
+    text-align: center;
+}
+
+.titulo-grilla {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.grid-letra-a {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.celda {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.celda.llena {
+    background-color: #007bff;
+    color: white;
+}
+
+.celda.vacia {
+    background-color: #f0f0f0;
+    color: transparent;
+}
+
+.info-nombre {
+    background: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.info-nombre p {
+    font-size: 2rem;
+    margin: 8px 0;
+}
+
+.pie {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.pie p {
+    margin: 0;
+    font-size: 3rem;
+}
+
+@media (max-width: 900px) {
+    .contenedor-tres-columnas {
+        grid-template-columns: 220px 1fr 220px;
+    }
+    
+    .titulo-principal {
+        font-size: 1.2rem;
+    }
+    
+    .subtitulo-columna {
+        font-size: 1.2rem;
+    }
+    
+    .boton-menu-principal {
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+    
+    .carousel-item img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor-tres-columnas {
+        grid-template-columns: 1fr;
+    }
+    
+    .columna-menu {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+    
+    .columna-publicidad {
+        border-left: none;
+        border-top: 1px solid #dee2e6;
+    }
+    
+    .grid-letra-a {
+        gap: 8px;
+        max-width: 300px;
+    }
+    
+    .celda {
+        font-size: 1rem;
+    }
+}
